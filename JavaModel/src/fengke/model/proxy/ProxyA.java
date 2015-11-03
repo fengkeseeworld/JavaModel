@@ -80,6 +80,7 @@ public class ProxyA {
 	class ProxyTask implements ITask{
 		//利用构造方法引用一个被代理类的对象为己持有
 		private ITask dealTask;
+		//《！——--重点--——》
 		//引用一个被代理类的对象
 		public ProxyTask(ITask dealTask) {
 			this.dealTask=dealTask;

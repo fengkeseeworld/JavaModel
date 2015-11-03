@@ -40,13 +40,14 @@ public class ProxyC {
 		//向客户返回一个代理类
 		private Enhancer enhancer=new  Enhancer();
 		
-		//产生代理类
+		//产生代理类的实例
 		public Object getCglibProxy(Class c) {
 			enhancer.setSuperclass(c);
 			enhancer.setCallback(this);
 			return enhancer.create();
 		}
 		/**
+		 * 拦截
 		 * @param obj  被代理的对象
 		 * @param method  被代理类的方法
 		 * @param args 被代理类方法的参数

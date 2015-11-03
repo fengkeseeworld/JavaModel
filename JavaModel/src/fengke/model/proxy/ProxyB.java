@@ -35,6 +35,7 @@ import fengke.model.proxy.ProxyA.ITask;
  * 缺点：
  * 		Proxy已经设计得非常优美，但是还是有一点点小小的遗憾之处，那就是它始终无法摆脱仅支持 interface代理的桎梏，因为它的设计注定了这个遗憾。
  * 		JDK动态代理只能为实现接口的类进行代理，没有实现接口的类无法代理。
+ * 		实例化代理类，并将其传入到实例化的代理当中，创建新的业务接口实现
  * 		
  * 
  */
@@ -94,6 +95,7 @@ public class ProxyB {
 	//测试
 	public static void main(String[] args) {
 		ProxyB proxy = new ProxyB();
+		//实例化被代理类
 		DealTask dealTask = proxy.new DealTask();
 		// 获取动态代理类对象
 		JDKProxy jdkProxy = proxy.new JDKProxy(dealTask);
