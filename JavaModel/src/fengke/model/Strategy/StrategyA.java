@@ -1,4 +1,4 @@
-package fengke.model.Strategy;
+package fengke.model.strategy;
 /**
  * 策略模式
  * 申明：

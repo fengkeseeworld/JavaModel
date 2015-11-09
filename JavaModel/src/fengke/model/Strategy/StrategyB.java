@@ -1,4 +1,4 @@
-package fengke.model.Strategy;
+package fengke.model.strategy;
 
 /*
  * 较为复杂的策略模式实现
